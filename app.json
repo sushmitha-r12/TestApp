@@ -1,0 +1,12 @@
+{
+  "name": "attendance2.0_app",
+  "displayName": "attendance2.0_app",
+  "expo": {
+    "name": "attendance2.0_app",
+    "slug": "attendance2.0_app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
