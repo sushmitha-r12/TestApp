@@ -1,5 +1,6 @@
 package com.attendance20app;
 
+import com.microsoft.codepush.react.CodePush;
 import android.app.Application;
 import android.content.Context;
 import android.net.Uri;
@@ -40,9 +41,15 @@ public class MainApplication extends Application implements ReactApplication {
     }
 
     @Override
+    protected String getJSBundleFile() {
+      return CodePush.getJSBundleFile();
+    }
+
+    @Override
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
+      packages.add(new CodePush("deployment-key-here", MainApplication.this, BuildConfig.DEBUG));
       return packages;
     }
 
